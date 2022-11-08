@@ -9,17 +9,25 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class UserDaoService {
-	private static List<User> users =new ArrayList<>();
+	private static List<User> users = new ArrayList<>();
+	
+	private static int usersCount = 0;
 	
 	static{
 		
-		users.add(new User(1,"Ram",LocalDate.now().minusYears(30)));
-		users.add(new User(2,"Ganga",LocalDate.now().minusYears(25)));
-		users.add(new User(3,"Mohan",LocalDate.now().minusYears(50)));
+		users.add(new User(++usersCount,"Ram",LocalDate.now().minusYears(30)));
+		users.add(new User(++usersCount,"Ganga",LocalDate.now().minusYears(25)));
+		users.add(new User(++usersCount,"Mohan",LocalDate.now().minusYears(50)));
 	}
 	
 	public List<User> findAll(){
 		return users;
+	}
+	
+	public User save(User user) {
+		user.setId(++usersCount);
+		users.add(user);
+		return user;
 	}
 
 	public User findOne(int id) {
