@@ -3,12 +3,12 @@ package com.abhishek.restwebservices.user;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import org.springframework.stereotype.Component;
 
 @Component
 public class UserDaoService {
-	
 	private static List<User> users =new ArrayList<>();
 	
 	static{
@@ -18,9 +18,12 @@ public class UserDaoService {
 		users.add(new User(3,"Mohan",LocalDate.now().minusYears(50)));
 	}
 	
-	public List<User> findALL(){
-		
+	public List<User> findAll(){
 		return users;
 	}
 
+	public User findOne(int id) {
+		Predicate<? super User> predicate = user -> user.getId().equals(id);
+		return users.stream().filter(predicate).findFirst().get();
+	}
 }
