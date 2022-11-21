@@ -26,3 +26,10 @@ This a learner repo for REST web service development
    - <code>GET/users/{id}/posts/{post_id}</code>
 
 ## Versioning of REST API
+
+### URI versioning like *Twitter*
+- <code>http://localhost:8080/v1/person</code>
+- <code>http://localhost:8080/v2/person</code>
+
+### Request Parameter versioning like *Amazon*
+- <code>http://localhost:8080/person?version=1</code>
