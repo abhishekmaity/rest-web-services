@@ -24,3 +24,5 @@ This a learner repo for REST web service development
    - <code>POST/users/{id}/posts/</code>
  - Retrieve details of a post
    - <code>GET/users/{id}/posts/{post_id}</code>
+
+## Versioning of REST API
