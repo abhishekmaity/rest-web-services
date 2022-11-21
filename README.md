@@ -37,3 +37,7 @@ This a learner repo for REST web service development
 ### Custom Header versioning like *Microsoft*
 - <code>SAME-URL headers=[X-API-Version=1]</code>
 - <code>SAME-URL headers=[X-API-Version=2]</code>
+
+### Media Type versioning (a.k.a "content negotiation" or "accept header") like *GitHub*
+- <code>SAME-URL produces=application/vnd.company.app.v1+json</code>
+- <code>SAME-URL produces=application/vnd.company.app.v2+json</code>
