@@ -33,3 +33,7 @@ This a learner repo for REST web service development
 
 ### Request Parameter versioning like *Amazon*
 - <code>http://localhost:8080/person?version=1</code>
+
+### Custom Header versioning like *Microsoft*
+- <code>SAME-URL headers=[X-API-Version=1]</code>
+- <code>SAME-URL headers=[X-API-Version=2]</code>
